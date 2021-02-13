@@ -1,0 +1,79 @@
+*** Reading local file: /root/airflow/logs/lesson3.exercise3/trips_subdag/2021-02-13T17:52:57.643823+00:00/1.log
+[2021-02-13 17:53:10,243] {models.py:1359} INFO - Dependencies all met for <TaskInstance: lesson3.exercise3.trips_subdag 2021-02-13T17:52:57.643823+00:00 [queued]>
+[2021-02-13 17:53:10,262] {models.py:1359} INFO - Dependencies all met for <TaskInstance: lesson3.exercise3.trips_subdag 2021-02-13T17:52:57.643823+00:00 [queued]>
+[2021-02-13 17:53:10,262] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 1
+--------------------------------------------------------------------------------
+
+[2021-02-13 17:53:10,332] {models.py:1593} INFO - Executing <Task(SubDagOperator): trips_subdag> on 2021-02-13T17:52:57.643823+00:00
+[2021-02-13 17:53:10,332] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run lesson3.exercise3 trips_subdag 2021-02-13T17:52:57.643823+00:00 --job_id 15 --raw -sd DAGS_FOLDER/lesson3/exercise3/dag.py --cfg_path /tmp/tmpdf4ca492']
+[2021-02-13 17:53:12,562] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:12,561] {settings.py:174} INFO - settings.configure_orm(): Using pool settings. pool_size=5, pool_recycle=1800, pid=4577
+[2021-02-13 17:53:14,431] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:14,430] {__init__.py:51} INFO - Using executor LocalExecutor
+[2021-02-13 17:53:15,821] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:15,811] {models.py:273} INFO - Filling up the DagBag from /home/workspace/airflow/dags/lesson3/exercise3/dag.py
+[2021-02-13 17:53:18,121] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:18,121] {cli.py:520} INFO - Running <TaskInstance: lesson3.exercise3.trips_subdag 2021-02-13T17:52:57.643823+00:00 [running]> on host d30894dc2013
+[2021-02-13 17:53:18,813] {logging_mixin.py:95} INFO - [2021-02-13 17:53:18,812] {base_executor.py:56} INFO - Adding to queue: airflow run lesson3.exercise3.trips_subdag create_trips_table 2021-02-13T17:52:57.643823+00:00 --local -sd DAGS_FOLDER/lesson3/exercise3/dag.py --cfg_path /tmp/tmposcxdhoe
+[2021-02-13 17:53:23,284] {logging_mixin.py:95} INFO - [2021-02-13 17:53:23,284] {sequential_executor.py:45} INFO - Executing command: airflow run lesson3.exercise3.trips_subdag create_trips_table 2021-02-13T17:52:57.643823+00:00 --local -sd DAGS_FOLDER/lesson3/exercise3/dag.py --cfg_path /tmp/tmposcxdhoe
+[2021-02-13 17:53:24,741] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:24,729] {settings.py:174} INFO - settings.configure_orm(): Using pool settings. pool_size=5, pool_recycle=1800, pid=4706
+[2021-02-13 17:53:27,619] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:27,618] {__init__.py:51} INFO - Using executor LocalExecutor
+[2021-02-13 17:53:28,229] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:28,229] {models.py:273} INFO - Filling up the DagBag from /home/workspace/airflow/dags/lesson3/exercise3/dag.py
+[2021-02-13 17:53:30,297] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:30,296] {cli.py:520} INFO - Running <TaskInstance: lesson3.exercise3.trips_subdag.create_trips_table 2021-02-13T17:52:57.643823+00:00 [queued]> on host d30894dc2013
+[2021-02-13 17:53:42,239] {logging_mixin.py:95} INFO - [2021-02-13 17:53:42,239] {jobs.py:2100} INFO - [backfill progress] | finished run 0 of 1 | tasks waiting: 1 | succeeded: 1 | running: 0 | failed: 0 | skipped: 0 | deadlocked: 0 | not ready: 1
+[2021-02-13 17:53:42,398] {logging_mixin.py:95} INFO - [2021-02-13 17:53:42,398] {base_executor.py:56} INFO - Adding to queue: airflow run lesson3.exercise3.trips_subdag load_trips_from_s3_to_redshift 2021-02-13T17:52:57.643823+00:00 --local -sd DAGS_FOLDER/lesson3/exercise3/dag.py --cfg_path /tmp/tmpa4ky7gas
+[2021-02-13 17:53:42,544] {logging_mixin.py:95} INFO - [2021-02-13 17:53:42,544] {sequential_executor.py:45} INFO - Executing command: airflow run lesson3.exercise3.trips_subdag load_trips_from_s3_to_redshift 2021-02-13T17:52:57.643823+00:00 --local -sd DAGS_FOLDER/lesson3/exercise3/dag.py --cfg_path /tmp/tmpa4ky7gas
+[2021-02-13 17:53:45,587] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:45,586] {settings.py:174} INFO - settings.configure_orm(): Using pool settings. pool_size=5, pool_recycle=1800, pid=4884
+[2021-02-13 17:53:47,741] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:47,740] {__init__.py:51} INFO - Using executor LocalExecutor
+[2021-02-13 17:53:48,414] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:48,413] {models.py:273} INFO - Filling up the DagBag from /home/workspace/airflow/dags/lesson3/exercise3/dag.py
+[2021-02-13 17:53:51,330] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag [2021-02-13 17:53:51,330] {cli.py:520} INFO - Running <TaskInstance: lesson3.exercise3.trips_subdag.load_trips_from_s3_to_redshift 2021-02-13T17:52:57.643823+00:00 [queued]> on host d30894dc2013
+[2021-02-13 17:54:02,670] {logging_mixin.py:95} INFO - [2021-02-13 17:54:02,668] {jobs.py:1926} ERROR - Task instance <TaskInstance: lesson3.exercise3.trips_subdag.load_trips_from_s3_to_redshift 2021-02-13 17:52:57.643823+00:00 [failed]> failed
+[2021-02-13 17:54:02,698] {logging_mixin.py:95} INFO - [2021-02-13 17:54:02,697] {models.py:5258} INFO - Marking run <DagRun lesson3.exercise3.trips_subdag @ 2021-02-13T17:52:57.643823+00:00: backfill_2021-02-13T17:52:57.643823+00:00, externally triggered: False> failed
+[2021-02-13 17:54:02,791] {logging_mixin.py:95} INFO - [2021-02-13 17:54:02,791] {jobs.py:2100} INFO - [backfill progress] | finished run 1 of 1 | tasks waiting: 0 | succeeded: 1 | running: 0 | failed: 1 | skipped: 0 | deadlocked: 0 | not ready: 0
+[2021-02-13 17:54:02,841] {models.py:1788} ERROR - ---------------------------------------------------
+Some task instances failed:
+{('lesson3.exercise3.trips_subdag', 'load_trips_from_s3_to_redshift', datetime.datetime(2021, 2, 13, 17, 52, 57, 643823, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1)}
+Traceback (most recent call last):
+  File "/opt/conda/lib/python3.6/site-packages/airflow/models.py", line 1657, in _run_raw_task
+    result = task_copy.execute(context=context)
+  File "/opt/conda/lib/python3.6/site-packages/airflow/operators/subdag_operator.py", line 103, in execute
+    executor=self.executor)
+  File "/opt/conda/lib/python3.6/site-packages/airflow/models.py", line 4324, in run
+    job.run()
+  File "/opt/conda/lib/python3.6/site-packages/airflow/jobs.py", line 202, in run
+    self._execute()
+  File "/opt/conda/lib/python3.6/site-packages/airflow/utils/db.py", line 73, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.6/site-packages/airflow/jobs.py", line 2447, in _execute
+    raise AirflowException(err)
+airflow.exceptions.AirflowException: ---------------------------------------------------
+Some task instances failed:
+{('lesson3.exercise3.trips_subdag', 'load_trips_from_s3_to_redshift', datetime.datetime(2021, 2, 13, 17, 52, 57, 643823, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1)}
+
+[2021-02-13 17:54:02,846] {models.py:1819} INFO - Marking task as FAILED.
+[2021-02-13 17:54:02,887] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag Traceback (most recent call last):
+[2021-02-13 17:54:02,887] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/bin/airflow", line 32, in <module>
+[2021-02-13 17:54:02,887] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     args.func(args)
+[2021-02-13 17:54:02,887] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/utils/cli.py", line 74, in wrapper
+[2021-02-13 17:54:02,887] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     return f(*args, **kwargs)
+[2021-02-13 17:54:02,887] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/bin/cli.py", line 526, in run
+[2021-02-13 17:54:02,887] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     _run(args, dag, ti)
+[2021-02-13 17:54:02,887] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/bin/cli.py", line 445, in _run
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     pool=args.pool,
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     return func(*args, **kwargs)
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/models.py", line 1657, in _run_raw_task
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     result = task_copy.execute(context=context)
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/operators/subdag_operator.py", line 103, in execute
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     executor=self.executor)
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/models.py", line 4324, in run
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     job.run()
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/jobs.py", line 202, in run
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     self._execute()
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/utils/db.py", line 73, in wrapper
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     return func(*args, **kwargs)
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag   File "/opt/conda/lib/python3.6/site-packages/airflow/jobs.py", line 2447, in _execute
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag     raise AirflowException(err)
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag airflow.exceptions.AirflowException: ---------------------------------------------------
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag Some task instances failed:
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag {('lesson3.exercise3.trips_subdag', 'load_trips_from_s3_to_redshift', datetime.datetime(2021, 2, 13, 17, 52, 57, 643823, tzinfo=<TimezoneInfo [UTC, GMT, +00:00:00, STD]>), 1)}
+[2021-02-13 17:54:02,888] {base_task_runner.py:101} INFO - Job 15: Subtask trips_subdag 
+[2021-02-13 17:54:05,667] {logging_mixin.py:95} INFO - [2021-02-13 17:54:05,665] {jobs.py:2527} INFO - Task exited with return code 1
