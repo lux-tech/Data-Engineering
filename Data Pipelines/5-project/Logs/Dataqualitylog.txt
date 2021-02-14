@@ -1,0 +1,30 @@
+*** Reading local file: /root/airflow/logs/udac_example_dag/Run_data_quality_checks/2021-02-14T18:00:00+00:00/1.log
+[2021-02-14 19:00:46,707] {models.py:1359} INFO - Dependencies all met for <TaskInstance: udac_example_dag.Run_data_quality_checks 2021-02-14T18:00:00+00:00 [queued]>
+[2021-02-14 19:00:46,731] {models.py:1359} INFO - Dependencies all met for <TaskInstance: udac_example_dag.Run_data_quality_checks 2021-02-14T18:00:00+00:00 [queued]>
+[2021-02-14 19:00:46,732] {models.py:1571} INFO - 
+--------------------------------------------------------------------------------
+Starting attempt 1 of 4
+--------------------------------------------------------------------------------
+
+[2021-02-14 19:00:46,746] {models.py:1593} INFO - Executing <Task(DataQualityOperator): Run_data_quality_checks> on 2021-02-14T18:00:00+00:00
+[2021-02-14 19:00:46,746] {base_task_runner.py:118} INFO - Running: ['bash', '-c', 'airflow run udac_example_dag Run_data_quality_checks 2021-02-14T18:00:00+00:00 --job_id 39 --raw -sd DAGS_FOLDER/udac_example_dag.py --cfg_path /tmp/tmpj3e95oeg']
+[2021-02-14 19:00:47,399] {base_task_runner.py:101} INFO - Job 39: Subtask Run_data_quality_checks [2021-02-14 19:00:47,399] {settings.py:174} INFO - settings.configure_orm(): Using pool settings. pool_size=5, pool_recycle=1800, pid=25024
+[2021-02-14 19:00:48,378] {base_task_runner.py:101} INFO - Job 39: Subtask Run_data_quality_checks [2021-02-14 19:00:48,377] {__init__.py:51} INFO - Using executor LocalExecutor
+[2021-02-14 19:00:48,634] {base_task_runner.py:101} INFO - Job 39: Subtask Run_data_quality_checks [2021-02-14 19:00:48,633] {models.py:273} INFO - Filling up the DagBag from /home/workspace/airflow/dags/udac_example_dag.py
+[2021-02-14 19:00:48,671] {base_task_runner.py:101} INFO - Job 39: Subtask Run_data_quality_checks [2021-02-14 19:00:48,671] {cli.py:520} INFO - Running <TaskInstance: udac_example_dag.Run_data_quality_checks 2021-02-14T18:00:00+00:00 [running]> on host 1969126ccb12
+[2021-02-14 19:00:48,708] {data_quality.py:29} INFO - Checking Data Quality for songplays table
+[2021-02-14 19:00:48,881] {logging_mixin.py:95} INFO - [2021-02-14 19:00:48,880] {base_hook.py:83} INFO - Using connection to: id: redshift. Host: redshift.ctjribnufzzw.us-west-2.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: {}
+[2021-02-14 19:00:49,514] {data_quality.py:36} INFO - Data quality on table songplays check passed with 6820 records
+[2021-02-14 19:00:49,514] {data_quality.py:29} INFO - Checking Data Quality for users table
+[2021-02-14 19:00:49,526] {logging_mixin.py:95} INFO - [2021-02-14 19:00:49,526] {base_hook.py:83} INFO - Using connection to: id: redshift. Host: redshift.ctjribnufzzw.us-west-2.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: {}
+[2021-02-14 19:00:50,184] {data_quality.py:36} INFO - Data quality on table users check passed with 104 records
+[2021-02-14 19:00:50,185] {data_quality.py:29} INFO - Checking Data Quality for songs table
+[2021-02-14 19:00:50,195] {logging_mixin.py:95} INFO - [2021-02-14 19:00:50,195] {base_hook.py:83} INFO - Using connection to: id: redshift. Host: redshift.ctjribnufzzw.us-west-2.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: {}
+[2021-02-14 19:00:50,762] {data_quality.py:36} INFO - Data quality on table songs check passed with 24 records
+[2021-02-14 19:00:50,763] {data_quality.py:29} INFO - Checking Data Quality for artists table
+[2021-02-14 19:00:50,781] {logging_mixin.py:95} INFO - [2021-02-14 19:00:50,781] {base_hook.py:83} INFO - Using connection to: id: redshift. Host: redshift.ctjribnufzzw.us-west-2.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: {}
+[2021-02-14 19:00:51,381] {data_quality.py:36} INFO - Data quality on table artists check passed with 24 records
+[2021-02-14 19:00:51,381] {data_quality.py:29} INFO - Checking Data Quality for time table
+[2021-02-14 19:00:51,391] {logging_mixin.py:95} INFO - [2021-02-14 19:00:51,391] {base_hook.py:83} INFO - Using connection to: id: redshift. Host: redshift.ctjribnufzzw.us-west-2.redshift.amazonaws.com, Port: 5439, Schema: dev, Login: awsuser, Password: XXXXXXXX, extra: {}
+[2021-02-14 19:00:52,029] {data_quality.py:36} INFO - Data quality on table time check passed with 6820 records
+[2021-02-14 19:00:56,777] {logging_mixin.py:95} INFO - [2021-02-14 19:00:56,776] {jobs.py:2527} INFO - Task exited with return code 0
